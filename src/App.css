@@ -1,0 +1,107 @@
+@import url('./theme.css');
+
+body {
+  overflow: hidden;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: var(--background-color);
+}
+
+.App-header {
+  background-color: var(--background-color);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+.app-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.main-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 2rem;
+}
+
+.sidebar {
+  width: 350px;
+  min-width: 300px;
+  border-left: 1px solid var(--border-color);
+  padding: 1.5rem;
+  overflow-y: auto;
+  background-color: var(--component-background-color);
+  box-shadow: -2px 0 5px rgba(0,0,0,.05);
+}
+
+.player-bar {
+  border-top: 1px solid var(--border-color);
+  background-color: var(--component-background-color) !important;
+  box-shadow: 0 -2px 5px rgba(0,0,0,.05);
+}
+
+.song-library .card {
+  background-color: var(--component-background-color);
+  border: 1px solid var(--border-color);
+  transition: transform .2s ease-in-out, box-shadow .2s ease-in-out;
+}
+
+.song-library .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0,0,0,.1);
+}
+
+.queue .list-group-item {
+  background-color: transparent;
+  border-color: var(--border-color);
+  color: var(--text-color-secondary);
+  font-size: 0.9rem;
+}
+
+.queue .list-group-item.active {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+.song-card .card-img-container {
+  position: relative;
+}
+
+.song-card .card-actions {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  display: flex;
+  gap: 1rem;
+}
+
+.song-card:hover .card-actions {
+  opacity: 1;
+}
+
+.btn-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.queue-album-art {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 4px;
+}

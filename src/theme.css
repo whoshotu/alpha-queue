@@ -1,0 +1,9 @@
+:root {
+  --primary-color: #1DB954; /* Spotify Green */
+  --primary-hover-color: #1ED760;
+  --background-color: #121212;
+  --component-background-color: #181818;
+  --text-color: #FFFFFF;
+  --text-color-secondary: #B3B3B3;
+  --border-color: #282828;
+}
