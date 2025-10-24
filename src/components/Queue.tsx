@@ -1,11 +1,7 @@
 import React from 'react';
 import { Song } from '../data/Song';
 
-// Define the structure of the user object, assuming it's also used here
-interface User {
-  id: number;
-  username: string;
-}
+import { User } from '../App';
 
 interface QueueProps {
   queue: Song[];

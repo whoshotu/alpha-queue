@@ -10,7 +10,7 @@ import { Form, Button, InputGroup, Nav, NavDropdown } from 'react-bootstrap';
 import { getLoggedInUser, getPlaylists, createPlaylist } from './services/api';
 
 // The new User interface matching our backend model
-interface User {
+export interface User {
   _id: string;
   name: string;
   email: string;

@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://localhost:5000/api', // Base URL of our Node.js backend
+  baseURL: 'https://ancient-badlands-63959-edb088092d4d.herokuapp.com/api', // Base URL of our Node.js backend
 });
 
 // Interceptor to add the token to every request
