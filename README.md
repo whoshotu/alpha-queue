@@ -1,33 +1,39 @@
 # Alpha Queue
 
-This project is a music streaming application named Alpha Queue
+This project is a music streaming application named Alpha Queue.
 
-## Backend
+## Overview
 
-The backend is built with **Node.js** and **Express**, using **MongoDB** for the database. The backend is responsible for user authentication and playlist management.
+This is a full-stack application with a React frontend and a Node.js/Express backend. It uses MongoDB for the database.
 
-### Setup
+## Features
 
-1.  Navigate to the `backend` directory.
-2.  Run `npm install` to install the backend dependencies.
-3.  Create a `.env` file in the `backend` directory with the following content:
+*   User registration and login using JWT authentication.
+*   Search for music on YouTube.
+*   Create, save, and load playlists.
+*   A persistent play queue.
 
-    ```
-    MONGODB_URI=mongodb+srv://<user>:<password>@<cluster-url>/<database-name>?retryWrites=true&w=majority
-    ```
+## Running the Application
 
-    Replace `<user>`, `<password>`, `<cluster-url>`, and `<database-name>` with your MongoDB Atlas credentials.
+This application is designed to be run locally. You will need to run two separate processes in two separate terminals.
 
-## Frontend
+### 1. Run the Backend Server
 
-The frontend is a React application built with Create React App.
+-   Open a terminal.
+-   Navigate to the backend directory: `cd backend`
+-   Install dependencies: `npm install`
+-   Start the server: `npm start`
+-   *Leave this terminal running.*
 
-### Setup
+### 2. Run the Frontend Application
 
-1.  Install Node.js and npm.
-2.  Run `npm install` in the root directory to install the dependencies.
-3.  Run `npm start` to start the development server.
+-   Open a **second** terminal.
+-   Navigate to the project's root directory.
+-   Install dependencies: `npm install`
+-   Start the application: `npm start`
+-   Your browser should open to `http://localhost:3001`.
 
-## Deployment
+## Configuration
 
-The application is deployed on **Heroku**. The `Procfile` in the root directory is configured to run the Node.js backend server.
+-   The backend requires a `.env` file in the `backend` directory with your `MONGODB_URI` and a `JWT_SECRET`.
+-   The frontend API connection is configured in `src/services/api.ts`.
