@@ -1,6 +1,6 @@
 # Alpha Queue
 
-This project is a music streaming application named Alpha Queue. It was formerly known as Gemini Music.
+This project is a music streaming application named Alpha Queue
 
 ## Backend
 
